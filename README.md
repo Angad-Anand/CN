@@ -44,3 +44,42 @@ print("\nOriginal Number:",n)
 print("Product of the odd digits in the said number, or 0 if there aren't any")
 print(test(n))
 
+<!-- Write a Python function that accepts a string and counts the number of upper and lower case letters. -->
+def string_test(s):
+    d={"UPPER_CASE":0, "LOWER_CASE":0}
+    for c in s:
+        if c.isupper():
+           d["UPPER_CASE"]+=1
+        elif c.islower():
+           d["LOWER_CASE"]+=1
+        else:
+           pass
+    print ("Original String : ", s)
+    print ("No. of Upper case characters : ", d["UPPER_CASE"])
+    print ("No. of Lower case Characters : ", d["LOWER_CASE"])
+string_test('The quick Brown Fox')
+
+<!-- Write a Python program to find an integer exponent x such that a^x = n -->
+def test(n,a):
+    m = 1
+    x = 0
+    while m != n:
+        x += 1
+        m *= a
+    return x
+a = 2
+n = 1024
+print("a = ",a,": n = ",n)
+print("Find an integer exponent x such that a^x = n:")    
+print(test(n,a))
+
+<!-- Write a Python program to compute the sum of the ASCII values of the upper-case charactersn in a given string. -->
+def test(strs):
+    return sum(map(ord,filter(str.isupper,strs)))
+strs =  "JavaScript"
+print("\nOriginal strings:")
+print(strs)
+print("Sum of the ASCII values of the upper-case characters in the said string:")
+print(test(strs))
+
+
